@@ -1,6 +1,13 @@
 VAL
 ===
 
+### Comments (New)
+You may need to execute `make clean` before you run `make`.
+
+I also recently modified for the validator to print out final states onto the console. 
+
+
+### Original README
 This repository contains the current version of the VAL plan validation code. 
 
 Compilation under Linux using g++ should be straightforward: use "make validate", "make parser" etc. The repository also contains a ".cbp" file which is a CodeBlocks project file. Using this, the code is set up to offer the targets listed below for compilation using mingw under Windows. We have a version of the VAL code that compiles with Visual Studio, but have not completed the merging with this repository. Windows executables are in bin/validate, bin/parser etc.
@@ -32,4 +39,3 @@ validate -t <number> -v <domainfile> <problemfile> <planfile....>
 Multiple plan files can be handled together. The -t flag allows the value of epsilon to be set. The default value is 0.01, but 0.001 is a good value to use for most planners. Actions separated by epsilon or less are treated as simultaneous by VAL. -v is the verbose flag. 
 
 Another useful flag is the -l flag, which causes VAL to generate a LaTeX report, and -f <file> sets the file destination for this (the .tex extension is automatically added, so need not be placed on the command line).
-

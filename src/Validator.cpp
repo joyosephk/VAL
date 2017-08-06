@@ -1246,6 +1246,14 @@ bool Validator::checkGoal(const goal * g)
   //cout << "Checking " << *p << " in " << state << " and getting " << p->evaluate(&state) << "\n";
 	DerivedGoal::resetLists(&state);
 	bool b = p->evaluate(&state) && tjm.checkFinalState(state);
+
+	//////////////////////////////////
+	// Added by Joseph Kim
+	// -Print out final state
+	cout << "FINAL STATES: \n";
+	cout << state;
+	//////////////////////////////////
+	
     if(!b && (Verbose || ErrorReport))
     {
       errorLog.addGoal(p,&state);
